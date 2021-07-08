@@ -3,7 +3,9 @@ let userInput = document.getElementById('userInput')
 let ul = document.querySelector('ul')
 
 function inputLength() {
-    return userInput.value.length > 0
+    if(userInput.value > "                  "){
+    return userInput.value.length > 0 
+    }
 }
 
 function createTodo() {
@@ -30,7 +32,7 @@ buttonEnter.onclick = function() {
         createTodo()
     }
     else {
-        alert ('Empty task!')
+        alert ('Empty task!')  
     }
 }
 
